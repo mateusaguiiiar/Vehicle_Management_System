@@ -14,8 +14,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static List<Vehicle> registeredVehicles = new ArrayList<>();
-    private static List<Account> registeredAccounts = new ArrayList<>();
+    private static final List<Vehicle> registeredVehicles = new ArrayList<>();
+    private static final List<Account> registeredAccounts = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -121,7 +121,7 @@ public class Main {
         int numDoors = scanner.nextInt();
         scanner.nextLine();
 
-        Car car = new Car(temp.plate, temp.brand, temp.price, numDoors);
+        Car car = new Car(temp.getPlate(), temp.getBrand(), temp.getPrice(), numDoors);
         registeredVehicles.add(car);
         System.out.println("Carro cadastrado com sucesso!");
     }
@@ -134,7 +134,7 @@ public class Main {
         int engineCylinders = scanner.nextInt();
         scanner.nextLine();
 
-        Motorcycle motorcycle = new Motorcycle(temp.plate, temp.brand, temp.price, engineCylinders);
+        Motorcycle motorcycle = new Motorcycle(temp.getPlate(), temp.getBrand(), temp.getPrice(), engineCylinders);
         registeredVehicles.add(motorcycle);
         System.out.println("Moto cadastrada com sucesso!");
     }
@@ -147,7 +147,7 @@ public class Main {
         double cargoCapacity = scanner.nextDouble();
         scanner.nextLine();
 
-        Truck truck = new Truck(temp.plate, temp.brand, temp.price, cargoCapacity);
+        Truck truck = new Truck(temp.getPlate(), temp.getBrand(), temp.getPrice(), cargoCapacity);
         registeredVehicles.add(truck);
         System.out.println("Caminhão cadastrado com sucesso!");
     }
