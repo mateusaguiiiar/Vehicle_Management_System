@@ -287,15 +287,15 @@ public class Main {
             c.showData();
 
             System.out.println("\n-> Chamada com Projeção (Sobrecarga de Account):");
-            c.showData(0.5); // 0.5% Projection
+            c.showData(0.5); 
 
             System.out.println("\n-> Chamada Opcional (Sobrecarga da Subclasse):");
             if (c instanceof CheckingAccount) {
-                ((CheckingAccount) c).showData(true); // Detail limit
+                ((CheckingAccount) c).showData(true); 
             } else if (c instanceof SavingsAccount) {
-                ((SavingsAccount) c).showData(true); // Show annual rate
+                ((SavingsAccount) c).showData(true); 
             } else if (c instanceof InvestmentAccount) {
-                ((InvestmentAccount) c).showData(true); // Consider admin fee
+                ((InvestmentAccount) c).showData(true); 
             }
         }
         System.out.println("\n=============== FIM DA LISTAGEM ===============");
