@@ -11,6 +11,18 @@ public class Vehicle {
         this.price = price;
     }
 
+    public String getPlate() {
+        return plate;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void showData() {
         System.out.println("--- Dados do Veículo ---");
         System.out.println("Tipo: " + this.getClass().getSimpleName());
